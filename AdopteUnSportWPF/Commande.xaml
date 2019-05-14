@@ -6,7 +6,5 @@
         xmlns:local="clr-namespace:AdopteUnSportWPF"
         mc:Ignorable="d"
         Title="Commande" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Grid/>
 </Window>

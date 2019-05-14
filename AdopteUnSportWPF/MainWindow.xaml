@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdopteUnSportWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="AdopteUnSport" HorizontalAlignment="Center" Height="450" Width="800">
+
     <Grid>
-        
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Margin="314,130,0,0" />
+        <Label Content="Identifiant :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,128,0,0" Height="25" Width="89"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Margin="314,193,0,0" />
+        <Label Content="Mot de passe :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,191,0,0" Height="25" Width="89"/>
+        <Label Content="AdopteUnSport" HorizontalAlignment="Left" Margin="211,30,0,0" VerticalAlignment="Top" Height="57" Width="314"/>
+        <Button x:Name="btnconnexion" Content="Connexion" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Height="26" Margin="338,272,0,0" Click="Btnconnexion_Click"/>
+
     </Grid>
 </Window>

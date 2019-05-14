@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace AdopteUnSportWPF
 {
     /// <summary>
-    /// Logique d'interaction pour Produit.xaml
+    /// Logique d'interaction pour AjoutProduit.xaml
     /// </summary>
-    public partial class Produit : Window
+    public partial class AjoutProduit : Window
     {
-        public Produit()
+        public AjoutProduit()
         {
             InitializeComponent();
         }

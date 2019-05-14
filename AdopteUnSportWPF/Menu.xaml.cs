@@ -44,5 +44,15 @@ namespace AdopteUnSportWPF
             Client Clt = new Client();
             Clt.ShowDialog();
         }
+
+        private void BtnInfoClient_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnAjoutProduit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

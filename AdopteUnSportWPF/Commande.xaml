@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdopteUnSportWPF"
         mc:Ignorable="d"
-        Title="Commande" Height="450" Width="800">
+        Title="Nouvelle Commande" Height="450" Width="800">
     <Grid/>
 </Window>

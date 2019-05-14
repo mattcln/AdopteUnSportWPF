@@ -5,12 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdopteUnSportWPF"
         mc:Ignorable="d"
-        Title="Menu" Height="450" Width="500">
+        Title="Menu" Height="1200" Width="400">
     <Grid>
-        <Button x:Name="btnCommande" Content="Commande" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="95,134,0,0" Height="60" Click="btnCommande_Click"/>
-        <Button x:Name="btnLivraison" Content="Livraison" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="298,262,0,0"  Height="60" Click="btnLivraison_Click"/>
-        <Button x:Name="btnProduit" Content="Produit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="298,134,0,0"  Height="60" Click="btnProduit_Click"/>
-        <Button x:Name="btnClient" Content="Client" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="95,262,0,0"  Height="60" Click="btnClient_Click"/>
+        <Label Content="Client" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,27,0,0" Height="37" Width="84" FontWeight="Bold"/>
+        <Button x:Name="btnClient" Content="Nouveau" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="19,64,0,0"  Height="60" Click="btnClient_Click"/>
+        <Button x:Name="btnInfoClient" Content="Information" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="150,64,0,0"  Height="60" Click="BtnInfoClient_Click"/>
+
+
+        <Label Content="Commande" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,399,0,0" Height="37" Width="84" FontWeight="Bold"/>
+        <Button x:Name="btnCommande" Content="Nouvelle Commande" HorizontalAlignment="Left" VerticalAlignment="Top" Width="131" Margin="10,436,0,0" Height="60" Click="btnCommande_Click"/>
+        <Label Content="Livraison" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,319,0,0" Height="37" Width="84" FontWeight="Bold"/>
+        <Button x:Name="btnLivraison" Content="Livraison" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Margin="10,339,0,0"  Height="60" Click="btnLivraison_Click"/>
+        <Label Content="Produit" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,210,0,0" Height="37" Width="84" FontWeight="Bold"/>
+        <Button x:Name="btnProduit" Content="Information Produit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Margin="10,247,0,0"  Height="60" Click="btnProduit_Click"/>
+        <Button x:Name="btnAjoutProduit" Content="Ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="117" Margin="159,247,0,0"  Height="60" Click="BtnAjoutProduit_Click"/>
+
+
+
+
 
 
     </Grid>

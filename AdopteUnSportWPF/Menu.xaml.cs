@@ -31,7 +31,8 @@ namespace AdopteUnSportWPF
         }
         private void btnProduit_Click(object sender, RoutedEventArgs e)
         {
-      
+            InformationsProduit InfoProd = new InformationsProduit();
+            InfoProd.ShowDialog();
         }
         private void btnLivraison_Click(object sender, RoutedEventArgs e)
         {

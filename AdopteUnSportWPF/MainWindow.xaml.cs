@@ -29,8 +29,19 @@ namespace AdopteUnSportWPF
 
         private void Btnconnexion_Click(object sender, RoutedEventArgs e)
         {
-            Menu Mn = new Menu();
-            Mn.ShowDialog();
+            string Pseudo = TextBlockID.Text; string MDP = TextBlockMDP.Text;
+            if (Pseudo == "gpadormi" && MDP == "aled")
+            {
+                Menu Mn = new Menu();
+                Mn.ShowDialog();
+            }
+            else Wrong.Content = "Mauvaise combinaison pseudonyme / mot de passe";
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

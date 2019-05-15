@@ -67,6 +67,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InformationsProduit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Livraison.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,6 +91,9 @@
     </Compile>
     <Compile Include="Commande.xaml.cs">
       <DependentUpon>Commande.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InformationsProduit.xaml.cs">
+      <DependentUpon>InformationsProduit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Livraison.xaml.cs">
       <DependentUpon>Livraison.xaml</DependentUpon>
@@ -127,7 +134,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Logo.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

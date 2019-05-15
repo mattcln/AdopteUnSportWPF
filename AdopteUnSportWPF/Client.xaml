@@ -7,20 +7,19 @@
         mc:Ignorable="d"
         Title="Nouveau Client" Height="450" Width="800">
     <StackPanel>
-
-        <Label Content="Nom"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap" Text="" Margin="0,0,550,0"/>
-        <Label Content="Prénom"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap" Text="" Margin="0,0,550,0"/>
-        <Label Content="Année de naissance"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap" Text="" Margin="0,0,550,0"/>
-        <Label Content="Adresse"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap" Text="" Margin="0,0,550,0"/>
-        <Label Content="Ville"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap" Text="" Margin="0,0,550,0"/>
-        <Label Content="Adresse Email"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap" Text="" Margin="0,0,550,0"/>
-        <Button x:Name="btnValiderC" Content="Valider" Height="23" Width="70" Margin="0,50,550,0" Padding="2"/>
+        <Label Content="Nom" Width="50"/>
+        <TextBox Height="23" Width="220" TextWrapping="Wrap"/>
+        <Label Content="Prénom" Width="50"/>
+        <TextBox Height="23" Width="220" TextWrapping="Wrap"/>
+        <Label Content="Année de naissance" Width="114"/>
+        <TextBox Height="23" Width="220" TextWrapping="Wrap"/>
+        <Label Content="Adresse" Width="52"/>
+        <TextBox Height="23" Width="220" TextWrapping="Wrap"/>
+        <Label Content="Ville" Width="32"/>
+        <TextBox Height="23" Width="220" TextWrapping="Wrap"/>
+        <Label Content="Adresse Email" Width="51"/>
+        <TextBox Height="23" Width="220" TextWrapping="Wrap" Margin="0 0 0 20"/>
+        <Button x:Name="btnValiderC" Content="Valider" Height="23" Width="70" Padding="2"/>
 
     </StackPanel>
 </Window>

@@ -22,7 +22,7 @@
         <Button x:Name="btnLivraison" Content="Livraison" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Margin="131,298,0,0"  Height="40" Click="btnLivraison_Click" Grid.ColumnSpan="2"/>
         <Label Content="Produit" VerticalAlignment="Top" Margin="167,151,171.6,0" Height="37" Width="55" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <Button x:Name="btnProduit" Content="Information du produit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Margin="52,193,0,0"  Height="40" Click="btnProduit_Click"/>
-        <Button x:Name="btnAjoutProduit" Content="Ajouter" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Margin="15.2,193,0,0"  Height="40" Click="BtnAjoutProduit_Click" Grid.Column="1"/>
+        <Button x:Name="btnAjoutProduit" Content="Modifier Stock" HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" Margin="15.2,193,0,0"  Height="40" Click="BtnAjoutProduit_Click" Grid.Column="1"/>
 
 
 

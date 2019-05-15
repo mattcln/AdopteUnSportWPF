@@ -47,7 +47,8 @@ namespace AdopteUnSportWPF
 
         private void BtnInfoClient_Click(object sender, RoutedEventArgs e)
         {
- 
+            InfoClient IClt = new InfoClient();
+            IClt.ShowDialog();
         }
 
         private void BtnAjoutProduit_Click(object sender, RoutedEventArgs e)

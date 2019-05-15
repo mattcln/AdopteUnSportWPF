@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdopteUnSportWPF"
         mc:Ignorable="d"
-        Title="AjoutProduit" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="AjoutProduit" Height="220" Width="600">
+    <Border Padding="10">
+        <StackPanel>
+            <TextBlock Margin =" 0 0 0 10" Text="Veuillez renseigner l'ID du produit dont vous cherchez les informations :" FontWeight="Bold" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="TextBlockIDP" Grid.Column="0"/>
+                <Label x:Name="WrongID" Grid.Column="2" Foreground="Red" Margin ="10 0 0 0" FontWeight ="Bold"/>
+            </Grid>
+            <TextBlock Margin =" 0 10 0 10" Text="Combien de stock voulez-vous ajouter à l'article ?" FontWeight="Bold" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="TextBlockStock" Grid.Column="0"/>
+
+                <Label x:Name="WrongS" Grid.Column="2" Foreground="Red" Margin ="10 0 0 0" FontWeight ="Bold"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content ="Ajouter stock" Margin="0 10 0 0" Click="Button_Click"/>
+                <Label Grid.Column="1" x:Name="Réussite" FontWeight ="Bold" Margin="0 10 10 0" Foreground="Green"></Label>
+            </Grid>
+        </StackPanel>
+    </Border>
 </Window>

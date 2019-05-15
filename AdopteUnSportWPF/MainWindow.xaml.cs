@@ -41,7 +41,7 @@ namespace AdopteUnSportWPF
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            // ENORME BITE SA MERE
         }
     }
 }

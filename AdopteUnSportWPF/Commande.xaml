@@ -5,6 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdopteUnSportWPF"
         mc:Ignorable="d"
-        Title="Nouvelle Commande" Height="450" Width="800">
-    <Grid/>
+        Title="Nouvelle Commande" Height="240" Width="600">
+    <Border Padding="10">
+        <StackPanel>
+            <TextBlock Margin =" 0 0 0 10" Text="Est-ce que le client a déjà un compte client ?" FontWeight="Bold" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="OuiClient" Content="Oui" FontWeight ="Bold" Height="20" Grid.Column="0" Margin="30 0 60 0" Click="OuiClient_Click"/>
+                <Button x:Name="NonClient" Content="Non" FontWeight ="Bold" Height="20" Grid.Column="1" Margin="60 0 30 0" Click="NonClient_Click"/>
+            </Grid>
+            <TextBlock Margin =" 0 20 0 10" Text="Avez-vous l'ID du client ?" FontWeight="Bold" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="OuiClientID" Content="Oui" FontWeight ="Bold" Height="20" Grid.Column="0" Margin="30 0 60 0" Click="OuiClient_Click"/>
+                <Button x:Name="NonClientID" Content="Non" FontWeight ="Bold" Height="20" Grid.Column="1" Margin="60 0 30 0" Click="NonClient_Click"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="TextBlockIDP" Grid.Column="0" Margin="0 10 0 0"/>
+                <Button Content ="Rechercher" Grid.Column="1" Margin="10 10 0 0" Click="Button_Click"/>
+                <Label x:Name="Wrong" Grid.Column="2" Foreground="Red" Margin ="10 10 0 0" FontWeight ="Bold"/>
+            </Grid>
+        </StackPanel>
+        
+    </Border>
 </Window>

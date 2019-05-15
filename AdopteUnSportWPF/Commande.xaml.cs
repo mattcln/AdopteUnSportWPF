@@ -23,5 +23,26 @@ namespace AdopteUnSportWPF
         {
             InitializeComponent();
         }
+
+        private void OuiClient_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void NonClient_Click(object sender, RoutedEventArgs e)
+        {
+            Client Clt = new Client();
+            Clt.ShowDialog();
+            OuiClient_Click(sender, e);
+        }
+        private void OuiClientID_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NonClientID_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

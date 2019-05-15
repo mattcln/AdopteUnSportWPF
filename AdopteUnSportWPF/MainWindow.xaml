@@ -7,13 +7,16 @@
         mc:Ignorable="d"
         Title="AdopteUnSport" HorizontalAlignment="Center" Height="450" Width="800">
 
-    <Grid Background="#FF1F5962">
-        <TextBox x:Name="TextBlockID" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Margin="200,201,200,0" TextChanged="TextBox_TextChanged" />
-        <Label Content="Identifiant :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="242,198,0,0" Height="25" Width="89" Foreground="White"/>
-        <TextBox x:Name="TextBlockMDP" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Margin="200.8,257,200.8,0" />
-        <Label Content="Mot de passe :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225,254,0,0" Height="25" Width="89" Foreground="White"/>
-        <Button x:Name="btnConnexion" Content="Connexion" VerticalAlignment="Top" Width="90" Height="26" Margin="200,314,200,0" Click="Btnconnexion_Click"/>
-        <Label x:Name="Wrong" VerticalAlignment="Top" Height="30" Width="305" Margin="220,164,220,0" Background="White" Foreground="Red" FontWeight ="Bold"/>
-        <Image Margin="215,13,215,255" Source="Logo.PNG" Stretch="Fill"/>
+    <Grid>
+        <Grid Background="#FF1F5962">
+            <TextBox x:Name="TextBlockID" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Margin="200,201,200,0" TextChanged="TextBox_TextChanged" />
+            <Label Content="Identifiant :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="242,198,0,0" Height="25" Width="89" Foreground="White"/>
+            <TextBox x:Name="TextBlockMDP" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Margin="200.8,257,200.8,0" />
+            <Label Content="Mot de passe :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225,254,0,0" Height="25" Width="89" Foreground="White"/>
+            <Button x:Name="btnConnexion" Content="Connexion" VerticalAlignment="Top" Width="90" Height="26" Margin="200,314,200,0" Click="Btnconnexion_Click"/>
+            <Label x:Name="Wrong" VerticalAlignment="Top" Height="30" Width="305" Margin="220,164,220,0" Background="#FF1F5962" Foreground="White" FontWeight ="Bold"/>
+            <Image Margin="215,13,215,255" Source="Logo.PNG" Stretch="Fill"/>
+        </Grid>
+
     </Grid>
 </Window>

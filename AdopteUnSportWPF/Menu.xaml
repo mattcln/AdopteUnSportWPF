@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdopteUnSportWPF"
         mc:Ignorable="d"
-        Title="Menu" Height="1200" Width="400">
+        Title="Menu" Height="550" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="236*"/>

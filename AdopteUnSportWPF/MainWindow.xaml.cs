@@ -29,7 +29,7 @@ namespace AdopteUnSportWPF
 
         private void Btnconnexion_Click(object sender, RoutedEventArgs e)
         {
-            string Pseudo = TextBlockID.Text; string MDP = TextBlockMDP.Text;
+            string Pseudo = TextBlockID.Text; string MDP = TextBlockMDP.Password;
             if (Pseudo == "gpadormi" && MDP == "aled")
             {
                 Menu Mn = new Menu();

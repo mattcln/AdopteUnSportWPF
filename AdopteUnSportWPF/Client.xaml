@@ -6,20 +6,21 @@
         xmlns:local="clr-namespace:AdopteUnSportWPF"
         mc:Ignorable="d"
         Title="Nouveau Client" Height="450" Width="800">
-    <StackPanel>
-        <Label Content="Nom" Width="50"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap"/>
-        <Label Content="Prénom" Width="50"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap"/>
-        <Label Content="Année de naissance" Width="114"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap"/>
-        <Label Content="Adresse" Width="52"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap"/>
-        <Label Content="Ville" Width="32"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap"/>
-        <Label Content="Adresse Email" Width="51"/>
-        <TextBox Height="23" Width="220" TextWrapping="Wrap" Margin="0 0 0 20"/>
-        <Button x:Name="btnValiderC" Content="Valider" Height="23" Width="70" Padding="2"/>
+    <StackPanel Background="#FF1F5962">
+        <Label Content="Nom" Width="37" Foreground="White"/>
+        <TextBox x:Name="NomC" Height="23" Width="220" TextWrapping="Wrap"/>
+        <Label Content="Prénom" Width="50" Foreground="White"/>
+        <TextBox x:Name="PrenomC" Height="23" Width="220" TextWrapping="Wrap"/>
+        <Label Content="Année de naissance" Width="114" Foreground="White"/>
+        <TextBox x:Name="DateC" Height="23" Width="220" TextWrapping="Wrap"/>
+        <Label Content="Adresse" Width="52" Foreground="White"/>
+        <TextBox x:Name="AdresseC" Height="23" Width="220" TextWrapping="Wrap"/>
+        <Label Content="Ville" Width="32" Foreground="White"/>
+        <TextBox x:Name="VilleC" Height="23" Width="220" TextWrapping="Wrap"/>
+        <Label Content="Adresse Email" Width="87" Foreground="White"/>
+        <TextBox x:Name="MailC" Height="23" Width="220" TextWrapping="Wrap" Margin="0 0 0 20"/>
+        <Button x:Name="btnValiderC" Content="Valider" Height="23" Width="70" Padding="2" Click="BtnValiderC_Click_1"/>
+        <TextBlock x:Name="CreerC" TextWrapping="Wrap" Text="" Margin="250,15,250,0"/>
 
     </StackPanel>
 </Window>

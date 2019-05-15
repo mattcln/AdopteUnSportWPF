@@ -31,8 +31,7 @@ namespace AdopteUnSportWPF
         }
         private void btnProduit_Click(object sender, RoutedEventArgs e)
         {
-            Produit Pdt = new Produit();
-            Pdt.ShowDialog();
+      
         }
         private void btnLivraison_Click(object sender, RoutedEventArgs e)
         {
@@ -47,12 +46,13 @@ namespace AdopteUnSportWPF
 
         private void BtnInfoClient_Click(object sender, RoutedEventArgs e)
         {
-
+ 
         }
 
         private void BtnAjoutProduit_Click(object sender, RoutedEventArgs e)
         {
-
+            AjoutProduit APdt = new AjoutProduit();
+            APdt.ShowDialog();
         }
     }
 }

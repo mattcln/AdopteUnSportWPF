@@ -25,11 +25,13 @@ namespace AdopteUnSportWPF
 
         private void OuiClient_Click(object sender, RoutedEventArgs e)
         {
-                OuiClientID.IsEnabled = true;
-                OuiClientID.Opacity = 1;
-                NonClientID.IsEnabled = true;
-                NonClientID.Opacity = 1;
-                TextBlockQ.Opacity = 1;            
+            OuiClientID.IsEnabled = true;
+            OuiClientID.Opacity = 1;
+            NonClientID.IsEnabled = true;
+            NonClientID.Opacity = 1;
+            TextBlockQ.Opacity = 1;
+            OuiClient.IsEnabled = false;
+            NonClient.IsEnabled = false;
         }
 
         private void NonClient_Click(object sender, RoutedEventArgs e)
@@ -46,19 +48,16 @@ namespace AdopteUnSportWPF
             TextBlockIDC.Opacity = 1;
             TextIDClient.Opacity = 1;
             TextBlockIDC.Opacity = 1;
+            OuiClientID.IsEnabled = false;
+            NonClientID.IsEnabled = false;
         }
 
         private void NonClientID_Click(object sender, RoutedEventArgs e)
         {
             
-        }
+        }        
 
         private void IDClientValider_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
         {
             string IDClient = TextBlockIDC.Text;
             bool ExistenceCli = ExistenceClient(IDClient);
@@ -66,6 +65,14 @@ namespace AdopteUnSportWPF
             {
                 WrongC.Opacity = 0;
                 TrueC.Opacity = 1;
+                TextAjoutProduit.Opacity = 1;
+                TextBlockIDP.Opacity = 1;
+                TextBlockIDP.IsEnabled = true;
+                AjouterP.Opacity = 1;
+                AjouterP.IsEnabled = true;
+                IDClientValider.IsEnabled = false;
+                TextBlockIDC.IsEnabled = false;
+                
 
                 //InformationProduit(IDProduit);
             }
@@ -81,6 +88,9 @@ namespace AdopteUnSportWPF
             bool ExistenceProd = ExistenceProduit(IDProduit);
             if (ExistenceProd == true)
             {
+                TextPanier.Opacity = 1;
+                CloturerPan.Opacity = 1;
+                CloturerPan.IsEnabled = true;
                 WrongP.Opacity = 0;
                 TrueP.Opacity = 1;
                 if(ListeProd.Content != "")
@@ -99,6 +109,10 @@ namespace AdopteUnSportWPF
 
         private void btnCloturerP_Click(object sender, RoutedEventArgs e)
         {
+            TextBlockIDP.IsEnabled = false;
+            AjouterP.IsEnabled = false;
+            CloturerPan.IsEnabled = false;
+
             string ListeProduit = (string)ListeProd.Content;
             string ProdIndispo = VérifierStockProduit(ListeProduit);
             if(ProdIndispo == "")

@@ -19,16 +19,18 @@
                 <Button x:Name="OuiClient" Content="Oui" FontWeight ="Bold" Height="20" Grid.Column="0" Margin="30 0 60 0" Click="OuiClient_Click"/>
                 <Button x:Name="NonClient" Content="Non" FontWeight ="Bold" Height="20" Grid.Column="1" Margin="60 0 30 0" Click="NonClient_Click"/>
             </Grid>
-            <TextBlock x:Name ="TextBlockQ" Opacity ="1" Margin =" 0 20 0 10" Text="Avez-vous l'ID du client ?" FontWeight="Bold" />
+
+            <!--Question IDClient-->
+            <TextBlock x:Name ="TextBlockQ" Opacity ="0" Margin =" 0 20 0 10" Text="Avez-vous l'ID du client ?" FontWeight="Bold" />
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Opacity ="1" Click ="OuiClientID_Click" IsEnabled ="False" x:Name="OuiClientID" Content="Oui" FontWeight ="Bold" Height="20" Grid.Column="0" Margin="30 0 60 0" />
-                <Button Opacity ="1" Click ="NonClientID_Click" IsEnabled ="False" x:Name="NonClientID" Content="Non" FontWeight ="Bold" Height="20" Grid.Column="1" Margin="60 0 30 0" />
+                <Button Opacity ="0" Click ="OuiClientID_Click" IsEnabled ="False" x:Name="OuiClientID" Content="Oui" FontWeight ="Bold" Height="20" Grid.Column="0" Margin="30 0 60 0" />
+                <Button Opacity ="0" Click ="NonClientID_Click" IsEnabled ="False" x:Name="NonClientID" Content="Non" FontWeight ="Bold" Height="20" Grid.Column="1" Margin="60 0 30 0" />
             </Grid>
-            
+
             <!--Demande IDClient-->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -37,23 +39,32 @@
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Opacity ="1" x:Name="TextIDClient" Text=" IDClient :" Grid.Column="0" Margin="0 20 0 0" FontWeight="Bold" />
-                <TextBox Opacity ="1" IsEnabled ="False" x:Name="TextBlockIDC" Grid.Column="1" Margin="0 20 0 0"/>
-                <Button Opacity ="1" IsEnabled ="False" x:Name="IDClientValider" Content ="Valider" Grid.Column="2" Margin="10 20 0 0" Click="Button_Click"/>
-                <Label Opacity ="1" x:Name="WrongC" Content="Il n'existe aucun client avec cet ID." Grid.Column="3" Foreground="Red" Margin ="10 20 0 0" FontWeight ="Bold"/>
-                <Label Opacity ="1" x:Name="TrueC" Content="Le client a bien été trouvé." Grid.Column="3" Foreground="Green" Margin ="10 20 0 0" FontWeight ="Bold"/>
+                <TextBlock Opacity ="0" x:Name="TextIDClient" Height="20" Text=" IDClient :" Grid.Column="0" Margin="0 20 0 0" FontWeight="Bold" />
+                <TextBox Opacity ="0" IsEnabled ="False" Height="20" x:Name="TextBlockIDC" Grid.Column="1" Margin="0 20 0 0"/>
+                <Button Opacity ="0" IsEnabled ="False" Height="20" x:Name="IDClientValider" Content ="Valider" Grid.Column="2" Margin="10 20 0 0" Click="Button_Click"/>
+                <Label Opacity ="0" x:Name="WrongC" Content="Il n'existe aucun client avec cet ID." Grid.Column="3" Foreground="Red" Margin ="10 20 0 0" FontWeight ="Bold"/>
+                <Label Opacity ="0" x:Name="TrueC" Content="Le client a bien été trouvé." Grid.Column="3" Foreground="Green" Margin ="10 20 0 0" FontWeight ="Bold"/>
             </Grid>
 
             <!--Ajout Produit-->
-            <Label x:Name="TextAjoutProduit" Content="Ajout d'un produit :" FontWeight="Bold" Margin="0 10"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="TextAjoutProduit" Grid.Column="0" Content="Ajout d'un produit :" FontWeight="Bold" Margin="0 10"/>
+                <Button x:Name="CloturerPan" IsEnabled ="False" Grid.Column="2" FontWeight="Bold"  Height ="20" Content="Cloturer le panier" Margin="10 10 20 10" Background="#FF59B85E" Click="btnCloturerP_Click"/>
+            </Grid>
+            
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="TextBlockIDP" Grid.Column="0"/>
-                <Button x:Name="AjouterP" Click="btnAjouterP_Click" Content ="Ajouter" Grid.Column="1" Margin="10 0 0 0" />
+                <TextBox x:Name="TextBlockIDP" Grid.Column="0" Height="20"/>
+                <Button x:Name="AjouterP" Click="btnAjouterP_Click" Height="20" Content ="Ajouter" Grid.Column="1" Margin="10 0 0 0" />
                 <Label Opacity ="0" x:Name="WrongP" Content="Il n'existe aucun produit avec cet ID." Grid.Column="2" Foreground="Red" Margin ="10 0 0 0" FontWeight ="Bold"/>
                 <Label Opacity ="0" x:Name="TrueP" Content="Le produit a bien été trouvé." Grid.Column="2" Foreground="Green" Margin ="10 0 0 0" FontWeight ="Bold"/>
             </Grid>
@@ -67,7 +78,18 @@
                 <Label Opacity="1" x:Name="TextPanier" Grid.Column="0" Content="Voici le produit enregistré :" FontWeight="Bold"/>
                 <Label Opacity="1" x:Name="ListeProd" Grid.Column="1" Foreground="Orange" Content="" />
             </Grid>
+
+            <!--Post-Cloture panier-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Opacity="0" x:Name="ProdDispo" Grid.Column="0" Content="La commande a bien été enregistrée." FontWeight="Bold" Foreground="Green" />
+                <Label Opacity="0" x:Name="ProdNonDispo" Grid.Column="0" Content="Les produits suivants n'ont plus de stock : " FontWeight="Bold" Foreground="Red" />
+            </Grid>
         </StackPanel>
+        
+        
         
     </Border>
 </Window>

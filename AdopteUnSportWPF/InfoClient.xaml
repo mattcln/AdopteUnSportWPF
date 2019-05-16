@@ -28,6 +28,7 @@
             <Label x:Name="Ville" Height="20" Margin="0 10 0 10"></Label>
             <Label x:Name="Depense" Height="20" Margin="0 10 0 10"></Label>
             <Label x:Name="Email" Height="20" Margin="0 10 0 10"></Label>
+            <Button Content ="Retour" Grid.Column="1" Margin="340 45 30 0" Click="Button_Click_1"/>
 
         </StackPanel>
     </Border>

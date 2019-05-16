@@ -21,6 +21,6 @@
         <TextBox x:Name="MailC" Height="23" Width="220" TextWrapping="Wrap" Margin="0 0 0 20"/>
         <Button x:Name="btnValiderC" Content="Valider" Height="23" Width="70" Padding="2" Click="BtnValiderC_Click_1"/>
         <TextBlock x:Name="CreerC" TextWrapping="Wrap" Text="" Margin="250,15,250,0"/>
-
+        <Button x:Name="Retour" Content="Retour" Height="23" Width="60"  Click="BtnValiderC_Click_2" />
     </StackPanel>
 </Window>

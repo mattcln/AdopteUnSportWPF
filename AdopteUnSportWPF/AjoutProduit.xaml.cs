@@ -100,5 +100,12 @@ namespace AdopteUnSportWPF
             maConnexion.Close();
             return Existence;
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Menu Mn = new Menu();
+            Visibility = Visibility.Hidden;
+            Mn.ShowDialog();
+        }
     }
 }

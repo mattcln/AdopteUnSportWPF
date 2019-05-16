@@ -9,7 +9,7 @@
 
     <Grid>
         <Grid Background="#FF1F5962">
-            <TextBox x:Name="TextBlockID" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Margin="200,201,200,0" TextChanged="TextBox_TextChanged" />
+            <TextBox x:Name="TextBlockID" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Margin="200,201,200,0"  />
             <Label Content="Identifiant :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="242,198,0,0" Height="25" Width="89" Foreground="White"/>
             <PasswordBox x:Name="TextBlockMDP" Height="23"  VerticalAlignment="Top" Width="150" Margin="200.8,257,200.8,0" />
             <Label Content="Mot de passe :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225,254,0,0" Height="25" Width="89" Foreground="White"/>

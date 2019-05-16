@@ -35,6 +35,7 @@
                 <Button Grid.Column="0" Content ="Ajouter stock" Margin="0 10 0 0" Click="Button_Click"/>
                 <Label Grid.Column="1" x:Name="Réussite" FontWeight ="Bold" Margin="0 10 10 0" Foreground="Green"></Label>
             </Grid>
+            <Button Grid.Column="1" Content ="Retour" Margin="520 20 0 0" Click="Button_Click_1"/>
         </StackPanel>
     </Border>
 </Window>

@@ -31,7 +31,7 @@ namespace AdopteUnSportWPF
 
             string Nom = NomC.Text;
             string Prénom = PrenomC.Text;
-            int AnnéeNaiss = int.Parse(DateC.Text);
+            int AnnéeNaiss = Convert.ToInt32(DateC.Text);
             string Adresse = AdresseC.Text;
             string Ville = VilleC.Text;
             string Email = MailC.Text;
@@ -82,6 +82,13 @@ namespace AdopteUnSportWPF
         private void BtnValiderC_Click_1(object sender, RoutedEventArgs e)
         {
             CréationClient();
+        }
+
+        private void BtnValiderC_Click_2(object sender, RoutedEventArgs e)
+        {
+            Menu Mn = new Menu();
+            Visibility = Visibility.Hidden;
+            Mn.ShowDialog();
         }
     }
 }

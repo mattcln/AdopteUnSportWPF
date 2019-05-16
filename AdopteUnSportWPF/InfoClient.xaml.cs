@@ -326,6 +326,13 @@ namespace AdopteUnSportWPF
             Email.Content = "Adresse Email:" + email;
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Menu Mn = new Menu();
+            Visibility = Visibility.Hidden;
+            Mn.ShowDialog();
+
+        }
     }
 
 }

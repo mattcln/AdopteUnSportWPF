@@ -56,7 +56,7 @@
                 <Label x:Name="TextAjoutProduit" Opacity ="0" Grid.Column="0" Content="Ajout d'un produit :" FontWeight="Bold" Margin="0 10"/>
                 <Button x:Name="CloturerPan" Opacity="0" IsEnabled ="False" Grid.Column="2" FontWeight="Bold"  Height ="20" Content="Cloturer le panier" Margin="10 10 20 10" Background="#FF59B85E" Click="btnCloturerP_Click"/>
             </Grid>
-            
+
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
@@ -68,7 +68,7 @@
                 <Label Opacity ="0" x:Name="WrongP" Content="Il n'existe aucun produit avec cet ID." Grid.Column="2" Foreground="Red" Margin ="10 0 0 0" FontWeight ="Bold"/>
                 <Label Opacity ="0" x:Name="TrueP" Content="Le produit a bien été trouvé." Grid.Column="2" Foreground="Green" Margin ="10 0 0 0" FontWeight ="Bold"/>
             </Grid>
-            
+
             <!--Information Panier-->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -83,13 +83,33 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label Opacity="0" x:Name="ProdDispo" Grid.Column="0" Content="La commande a bien été enregistrée." FontWeight="Bold" Foreground="Green" />
-                <Label Opacity="0" x:Name="ProdNonDispo" Grid.Column="0" Content="Les produits suivants n'ont plus de stock : " FontWeight="Bold" Foreground="Red" />
+                <Label Opacity="0" x:Name="ProdNonDispoT" Grid.Column="0" Content="Les produits suivants n'ont plus de stock : " FontWeight="Bold" Foreground="Red" />
+                <Label Opacity="0" x:Name="ProdNonDispo" Grid.Column="1" Content="" FontWeight="Bold" Foreground="Red" />
             </Grid>
+
+            <!--Demande Livraison-->
+            <TextBlock Opacity ="0" x:Name="TextLivraison" Margin =" 0 0 0 10" Text="Est-ce que le client veut se faire livrer ?" FontWeight="Bold" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Opacity="0" IsEnabled="False" x:Name="OuiLivraison" Content="Oui" FontWeight ="Bold" Height="20" Grid.Column="0" Margin="30 0 60 0" Click="OuiLivraison_Click"/>
+                <Button Opacity="0" IsEnabled="False" x:Name="NonLivraison" Content="Non" FontWeight ="Bold" Height="20" Grid.Column="1" Margin="60 0 30 0" Click="NonLivraison_Click"/>
+            </Grid>
+
+
+            <Label Opacity="0" x:Name="ProdDispoS"  Content="La commande a bien été enregistrée sans le(s) produit(s) : " FontWeight="Bold" Foreground="Green" />
+            <Label Opacity="0" x:Name="AdresseClient"  Content="" FontWeight="Bold" Foreground="Green" />
+            <Label Opacity="0" x:Name="Fournisseurs"  Content="" FontWeight="Bold" Foreground="Green" />
+            <Button x:Name="Retour" Content="Retour" FontWeight ="Bold" Height="20" Margin="30,0,59.6,0" Click="OuiClient_Click_1"/>
+
         </StackPanel>
-        
-        
-        
+
+
+
     </Border>
 </Window>

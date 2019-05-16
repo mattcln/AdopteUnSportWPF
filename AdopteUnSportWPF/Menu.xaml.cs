@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace AdopteUnSportWPF
 {
-    /// <summary>
-    /// Logique d'interaction pour Menu.xaml
-    /// </summary>
     public partial class Menu : Window
     {
         public Menu()
@@ -26,35 +23,46 @@ namespace AdopteUnSportWPF
 
         private void btnCommande_Click(object sender, RoutedEventArgs e)
         {
+            Visibility = Visibility.Hidden;
             Commande Cmd = new Commande();
             Cmd.ShowDialog();
         }
         private void btnProduit_Click(object sender, RoutedEventArgs e)
         {
+            Visibility = Visibility.Hidden;
             InformationsProduit InfoProd = new InformationsProduit();
             InfoProd.ShowDialog();
         }
         private void btnLivraison_Click(object sender, RoutedEventArgs e)
         {
+            Visibility = Visibility.Hidden;
             Livraison Lvs = new Livraison();
             Lvs.ShowDialog();
         }
         private void btnClient_Click(object sender, RoutedEventArgs e)
         {
+            Visibility = Visibility.Hidden;
             Client Clt = new Client();
             Clt.ShowDialog();
         }
 
         private void BtnInfoClient_Click(object sender, RoutedEventArgs e)
         {
+            Visibility = Visibility.Hidden;
             InfoClient IClt = new InfoClient();
             IClt.ShowDialog();
         }
 
         private void BtnAjoutProduit_Click(object sender, RoutedEventArgs e)
         {
+            Visibility = Visibility.Hidden;
             AjoutProduit APdt = new AjoutProduit();
             APdt.ShowDialog();
+        }
+
+        private void BtnQuitter_Click(object sender, RoutedEventArgs e)
+        {
+            Visibility = Visibility.Hidden;
         }
     }
 }

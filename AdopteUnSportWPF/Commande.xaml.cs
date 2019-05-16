@@ -54,7 +54,8 @@ namespace AdopteUnSportWPF
 
         private void NonClientID_Click(object sender, RoutedEventArgs e)
         {
-
+            InfoClient Mn = new InfoClient();
+            Mn.ShowDialog();
         }
 
         private void IDClientValider_Click(object sender, RoutedEventArgs e)

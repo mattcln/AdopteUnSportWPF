@@ -27,115 +27,7 @@ namespace AdopteUnSportWPF
         {
             InformationsClient();
         }
-        private bool ExistenceIDClient(string IDClients)                                                                                                             // CA MARCHE
-        {
-            bool Existence = false;
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenval1998;";
-            MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
-            maConnexion.Open();
-
-            MySqlCommand command = maConnexion.CreateCommand();
-            command.CommandText = "SELECT IDClients from Clients"; // exemple de requête
-
-            MySqlDataReader reader;
-            reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                for (int i = 0; i < reader.FieldCount; i++)
-                {
-                    string ligne = reader.GetValue(i).ToString();
-                    if (ligne == IDClients)
-                    {
-                        Existence = true;
-                        Console.WriteLine(" Le client a été trouvé.");
-                    }
-                }
-            }
-            maConnexion.Close();
-            return Existence;
-        }
-        private bool ExistenceNomClient(string nom)                                                                                                                  // CA MARCHE
-        {
-            bool Existence = false;
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenval1998;";
-            MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
-            maConnexion.Open();
-
-            MySqlCommand command = maConnexion.CreateCommand();
-            command.CommandText = "SELECT nom from Clients"; // exemple de requête
-
-            MySqlDataReader reader;
-            reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                for (int i = 0; i < reader.FieldCount; i++)
-                {
-                    string ligne = reader.GetValue(i).ToString();
-                    if (ligne == nom)
-                    {
-                        Existence = true;
-                        Console.WriteLine(" Le client a été trouvé.");
-                    }
-                }
-            }
-            maConnexion.Close();
-            return Existence;
-        }
-        private bool ExistenceAdresseClient(string adresse)                                                                                                          // CA MARCHE
-        {
-            bool Existence = false;
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = MATIbol78;";
-            MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
-            maConnexion.Open();
-
-            MySqlCommand command = maConnexion.CreateCommand();
-            command.CommandText = "SELECT adresse from Clients"; // exemple de requête
-
-            MySqlDataReader reader;
-            reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                for (int i = 0; i < reader.FieldCount; i++)
-                {
-                    string ligne = reader.GetValue(i).ToString();
-                    if (ligne == adresse)
-                    {
-                        Existence = true;
-                        Console.WriteLine(" Le client a été trouvé.");
-                    }
-                }
-            }
-            maConnexion.Close();
-            return Existence;
-        }
-        private bool ExistenceEmailClient(string email)                                                                                                              // CA MARCHE
-        {
-            bool Existence = false;
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = MATIbol78;";
-            MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
-            maConnexion.Open();
-
-            MySqlCommand command = maConnexion.CreateCommand();
-            command.CommandText = "SELECT email from Clients"; // exemple de requête
-
-            MySqlDataReader reader;
-            reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                for (int i = 0; i < reader.FieldCount; i++)
-                {
-                    string ligne = reader.GetValue(i).ToString();
-                    if (ligne == email)
-                    {
-                        Existence = true;
-                        Console.WriteLine(" Le client a été trouvé.");
-                    }
-                }
-            }
-            maConnexion.Close();
-            return Existence;
-        }
-
+        
         private void InformationsClient()                                                                                                                            // CA MARCHE
         {
 
@@ -164,14 +56,15 @@ namespace AdopteUnSportWPF
             {
 
                 InfoB = IdClient.Text;
-                Moyen = "idclient";
+                Moyen = "IDClient";
             }
 
             RetrouverInformationsclient(Moyen, InfoB);
         }
         private void RetrouverInformationsclient(string Moyen, string InfoB)                                                                                         // CA MARCHE
         {
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenval1998;";
+            bool Existe = false;
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = MATIbol78;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
             string IDClient = ""; string Nom = ""; string Prénom = ""; int dateNaiss = 0; string adresse = ""; string ville = ""; int depenses = 0; string email = "";
@@ -179,14 +72,6 @@ namespace AdopteUnSportWPF
             MySqlDataReader reader;
             if (Moyen == "IDClient")
             {
-                bool Existence = false;
-                Existence = ExistenceIDClient(InfoB);
-                while (Existence == false)
-                {
-
-                    InfoB = Console.ReadLine();
-                    Existence = ExistenceNomClient(InfoB);
-                }
                 command.CommandText = "select nom , prenom, dateNaiss , adresse, ville, depenses, email from Clients where IDClients = '" + InfoB + "'";
 
                 reader = command.ExecuteReader();
@@ -199,27 +84,23 @@ namespace AdopteUnSportWPF
                         string valeurattribut = reader.GetValue(i).ToString();
                         InfoClient += valeurattribut + ",";
                     }
-                }
+                }                
                 string[] TabInfoClient = InfoClient.Split(',');
-                IDClient = InfoB;
-                Nom = TabInfoClient[0];
-                Prénom = TabInfoClient[1];
-                dateNaiss = Convert.ToInt32(TabInfoClient[2]);
-                adresse = TabInfoClient[3];
-                ville = TabInfoClient[4];
-                depenses = Convert.ToInt32(TabInfoClient[5]);
-                email = TabInfoClient[6];
+                if (InfoClient.Length > 15)
+                {
+                    IDClient = InfoB;
+                    Nom = TabInfoClient[0];
+                    Prénom = TabInfoClient[1];
+                    dateNaiss = Convert.ToInt32(TabInfoClient[2]);
+                    adresse = TabInfoClient[3];
+                    ville = TabInfoClient[4];
+                    depenses = Convert.ToInt32(TabInfoClient[5]);
+                    email = TabInfoClient[6];
+                    Existe = true;
+                }
             }
             if (Moyen == "nom")
             {
-                bool Existence = false;
-                Existence = ExistenceNomClient(InfoB);
-                while (Existence == false)
-                {
-
-                    InfoB = Console.ReadLine();
-                    Existence = ExistenceNomClient(InfoB);
-                }
                 command.CommandText = "select IDClients , prenom, dateNaiss , adresse, ville, depenses, email from Clients where nom = '" + InfoB + "'";
 
                 reader = command.ExecuteReader();
@@ -233,27 +114,26 @@ namespace AdopteUnSportWPF
                         InfoClient += valeurattribut + ",";
                     }
                 }
+
                 string[] TabInfoClient = InfoClient.Split(',');
-                IDClient = TabInfoClient[0];
-                Nom = InfoB;
-                Prénom = TabInfoClient[1];
-                dateNaiss = Convert.ToInt32(TabInfoClient[2]);
-                adresse = TabInfoClient[3];
-                ville = TabInfoClient[4];
-                depenses = Convert.ToInt32(TabInfoClient[5]);
-                email = TabInfoClient[6];
+                if (InfoClient.Length > 15)
+                {
+                    IDClient = TabInfoClient[0];
+                    Nom = InfoB;
+                    Prénom = TabInfoClient[1];
+                    dateNaiss = Convert.ToInt32(TabInfoClient[2]);
+                    adresse = TabInfoClient[3];
+                    ville = TabInfoClient[4];
+                    depenses = Convert.ToInt32(TabInfoClient[5]);
+                    email = TabInfoClient[6];
+                    Existe = true;
+                }
+
             }
 
             if (Moyen == "adresse")
             {
-                bool Existence = false;
-                Existence = ExistenceAdresseClient(InfoB);
-                while (Existence == false)
-                {
-                    Console.WriteLine("L'adresse donnée n'existe pas dans les bases de données, veuillez en donner une nouvelle :");
-                    InfoB = Console.ReadLine();
-                    Existence = ExistenceNomClient(InfoB);
-                }
+                
                 command.CommandText = "select IDClients, nom, prenom , dateNaiss, ville, depenses, email from Clients where adresse = '" + InfoB + "'";
 
                 reader = command.ExecuteReader();
@@ -268,26 +148,22 @@ namespace AdopteUnSportWPF
                     }
                 }
                 string[] TabInfoClient = InfoClient.Split(',');
-                IDClient = TabInfoClient[0];
-                Nom = TabInfoClient[1];
-                Prénom = TabInfoClient[2];
-                dateNaiss = Convert.ToInt32(TabInfoClient[3]);
-                adresse = InfoB;
-                ville = TabInfoClient[4];
-                depenses = Convert.ToInt32(TabInfoClient[5]);
-                email = TabInfoClient[6];
+                if (InfoClient.Length > 15)
+                {
+                    IDClient = TabInfoClient[0];
+                    Nom = TabInfoClient[1];
+                    Prénom = TabInfoClient[2];
+                    dateNaiss = Convert.ToInt32(TabInfoClient[3]);
+                    adresse = InfoB;
+                    ville = TabInfoClient[4];
+                    depenses = Convert.ToInt32(TabInfoClient[5]);
+                    email = TabInfoClient[6];
+                    Existe = true;
+                }
             }
 
             if (Moyen == "email")
             {
-                bool Existence = false;
-                Existence = ExistenceEmailClient(InfoB);
-                while (Existence == false)
-                {
-
-                    InfoB = Console.ReadLine();
-                    Existence = ExistenceNomClient(InfoB);
-                }
                 command.CommandText = "select IDClients, nom, prenom , dateNaiss, adresse, ville, depenses from Clients where email = '" + InfoB + "'";
 
                 reader = command.ExecuteReader();
@@ -302,28 +178,58 @@ namespace AdopteUnSportWPF
                     }
                 }
                 string[] TabInfoClient = InfoClient.Split(',');
-                IDClient = TabInfoClient[0];
-                Nom = TabInfoClient[1];
-                Prénom = TabInfoClient[2];
-                dateNaiss = Convert.ToInt32(TabInfoClient[3]);
-                adresse = TabInfoClient[4];
-                ville = TabInfoClient[5];
-                depenses = Convert.ToInt32(TabInfoClient[6]);
-                email = InfoB;
+                if (InfoClient.Length > 15)
+                {
+                    IDClient = TabInfoClient[0];
+                    Nom = TabInfoClient[1];
+                    Prénom = TabInfoClient[2];
+                    dateNaiss = Convert.ToInt32(TabInfoClient[3]);
+                    adresse = TabInfoClient[4];
+                    ville = TabInfoClient[5];
+                    depenses = Convert.ToInt32(TabInfoClient[6]);
+                    email = InfoB;
+                    Existe = true;
+                }
+                            
             }
             maConnexion.Close();
-            AffichageInfoClient(IDClient, Nom, Prénom, dateNaiss, adresse, ville, depenses, email);
+            AffichageInfoClient(IDClient, Nom, Prénom, dateNaiss, adresse, ville, depenses, email, Existe);
         }
-        private void AffichageInfoClient(string IDClient, string nom, string Prénom, int DateNaiss, string adresse, string ville, int Dépenses, string email)        // CA MARCHE
+        private void AffichageInfoClient(string IDClient, string nom, string Prénom, int DateNaiss, string adresse, string ville, int Dépenses, string email, bool Existe)        // CA MARCHE
         {
-            Id.Content = "Identifiant client:" + IDClient;
-            Nom.Content = "Nom:" + nom;
-            Prenom.Content = "Prénom:" + Prénom;
-            Naissance.Content = "Année de naissance:" + DateNaiss;
-            Adresse.Content = "Adresse:" + adresse;
-            Ville.Content = "Ville:" + ville;
-            Depense.Content = "Dépense dans le magasin:" + Dépenses;
-            Email.Content = "Adresse Email:" + email;
+            if(Existe == false)
+            {
+                Id.Opacity = 0;
+                Nom.Opacity = 0;
+                Prenom.Opacity = 0;
+                Naissance.Opacity = 0;
+                Adresse.Opacity = 0;
+                Ville.Opacity = 0;
+                Depense.Opacity = 0;
+                Email.Opacity = 0;
+                Erreur.Opacity = 1;
+            }
+            else
+            {
+                Id.Opacity = 1;
+                Nom.Opacity = 1;
+                Prenom.Opacity = 1;
+                Naissance.Opacity = 1;
+                Adresse.Opacity = 1;
+                Ville.Opacity = 1;
+                Depense.Opacity = 1;
+                Email.Opacity = 1;
+                Erreur.Opacity = 0;
+                Id.Content = "Identifiant client : " + IDClient;
+                Nom.Content = "Nom : " + nom;
+                Prenom.Content = "Prénom : " + Prénom;
+                Naissance.Content = "Année de naissance : " + DateNaiss;
+                Adresse.Content = "Adresse : " + adresse;
+                Ville.Content = "Ville : " + ville;
+                Depense.Content = "Dépense dans le magasin : " + Dépenses;
+                Email.Content = "Adresse Email : " + email;
+            }
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

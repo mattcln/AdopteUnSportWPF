@@ -33,12 +33,7 @@ namespace AdopteUnSportWPF
             InformationsProduit InfoProd = new InformationsProduit();
             InfoProd.ShowDialog();
         }
-        private void btnLivraison_Click(object sender, RoutedEventArgs e)
-        {
-            Visibility = Visibility.Hidden;
-            Livraison Lvs = new Livraison();
-            Lvs.ShowDialog();
-        }
+        
         private void btnClient_Click(object sender, RoutedEventArgs e)
         {
             Visibility = Visibility.Hidden;

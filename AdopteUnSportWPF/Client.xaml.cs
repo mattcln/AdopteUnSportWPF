@@ -40,7 +40,7 @@ namespace AdopteUnSportWPF
         }
         private void EnregistrementClient(string Nom, string Prénom, int AnnéeNaiss, string Adresse, string Ville, string Email)                                     // CA MARCHE
         {
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenval1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
 
@@ -55,7 +55,7 @@ namespace AdopteUnSportWPF
         }
         private string CréationIDClient()                                                                                                                            // CA MARCHE
         {
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenval1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
             MySqlCommand command = maConnexion.CreateCommand();

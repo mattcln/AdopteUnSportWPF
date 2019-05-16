@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:AdopteUnSportWPF"
         mc:Ignorable="d"
         Title="Nouvelle Commande" Height="540" Width="600">
-    <Border Padding="10">
-        <StackPanel>
+    <Border Padding="10" Background="#FF1F5962">
+        <StackPanel Background="#FF1F5962">
 
             <!--Demande Compte client-->
-            <TextBlock Margin =" 0 0 0 10" Text="Est-ce que le client a déjà un compte client ?" FontWeight="Bold" />
+            <TextBlock Margin =" 0 0 0 10" Text="Est-ce que le client a déjà un compte client ?" FontWeight="Bold" Foreground="White"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -21,7 +21,7 @@
             </Grid>
 
             <!--Question IDClient-->
-            <TextBlock x:Name ="TextBlockQ" Opacity ="0" Margin =" 0 20 0 10" Text="Avez-vous l'ID du client ?" FontWeight="Bold" />
+            <TextBlock x:Name ="TextBlockQ" Opacity ="0" Margin =" 0 20 0 10" Text="Avez-vous l'ID du client ?" FontWeight="Bold" Foreground="White"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -39,21 +39,21 @@
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Opacity ="0" x:Name="TextIDClient" Height="20" Text=" IDClient :" Grid.Column="0" Margin="0 20 0 0" FontWeight="Bold" />
+                <TextBlock Opacity ="0" x:Name="TextIDClient" Height="20" Text=" IDClient :" Grid.Column="0" Margin="0 20 0 0" FontWeight="Bold" Foreground="White"/>
                 <TextBox Opacity ="0" IsEnabled ="False" Height="20" x:Name="TextBlockIDC" Grid.Column="1" Margin="0 20 0 0"/>
                 <Button Opacity ="0" IsEnabled ="False" Height="20" x:Name="IDClientValider" Content ="Valider" Grid.Column="2" Margin="10 20 0 0" Click="IDClientValider_Click"/>
                 <Label Opacity ="0" x:Name="WrongC" Content="Il n'existe aucun client avec cet ID." Grid.Column="3" Foreground="Red" Margin ="10 20 0 0" FontWeight ="Bold"/>
-                <Label Opacity ="0" x:Name="TrueC" Content="Le client a bien été trouvé." Grid.Column="3" Foreground="Green" Margin ="10 20 0 0" FontWeight ="Bold"/>
+                <Label Opacity ="0" x:Name="TrueC" Content="Le client a bien été trouvé." Grid.Column="3" Foreground="white" Margin ="10 20 0 0" FontWeight ="Bold"/>
             </Grid>
 
             <!--Ajout Produit-->
-            <Grid>
+            <Grid Margin="8,0,-8.4,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <Label x:Name="TextAjoutProduit" Opacity ="0" Grid.Column="0" Content="Ajout d'un produit :" FontWeight="Bold" Margin="0 10"/>
+                <Label x:Name="TextAjoutProduit" Opacity ="0" Grid.Column="0" Content="Ajout d'un produit :" FontWeight="Bold" Margin="0 10" Foreground="White"/>
                 <Button x:Name="CloturerPan" Opacity="0" IsEnabled ="False" Grid.Column="2" FontWeight="Bold"  Height ="20" Content="Cloturer le panier" Margin="10 10 20 10" Background="#FF59B85E" Click="btnCloturerP_Click"/>
             </Grid>
 
@@ -66,7 +66,7 @@
                 <TextBox x:Name="TextBlockIDP" Opacity ="0" IsEnabled ="False" Grid.Column="0" Height="20"/>
                 <Button x:Name="AjouterP" Opacity ="0" IsEnabled ="False" Click="btnAjouterP_Click" Height="20" Content ="Ajouter" Grid.Column="1" Margin="10 0 0 0" />
                 <Label Opacity ="0" x:Name="WrongP" Content="Il n'existe aucun produit avec cet ID." Grid.Column="2" Foreground="Red" Margin ="10 0 0 0" FontWeight ="Bold"/>
-                <Label Opacity ="0" x:Name="TrueP" Content="Le produit a bien été trouvé." Grid.Column="2" Foreground="Green" Margin ="10 0 0 0" FontWeight ="Bold"/>
+                <Label Opacity ="0" x:Name="TrueP" Content="Le produit a bien été trouvé." Grid.Column="2" Foreground="white" Margin ="10 0 0 0" FontWeight ="Bold"/>
             </Grid>
 
             <!--Information Panier-->
@@ -75,7 +75,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <Label Opacity="0" x:Name="TextPanier" Grid.Column="0" Content="Voici le produit enregistré :" FontWeight="Bold"/>
+                <Label Opacity="0" x:Name="TextPanier" Grid.Column="0" Content="Voici le produit enregistré :" FontWeight="Bold" Foreground="White"/>
                 <Label Opacity="1" x:Name="ListeProd" Grid.Column="1" Foreground="Orange" Content="" />
             </Grid>
 
@@ -85,13 +85,13 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Opacity="0" x:Name="ProdDispo" Grid.Column="0" Content="La commande a bien été enregistrée." FontWeight="Bold" Foreground="Green" />
+                <Label Opacity="0" x:Name="ProdDispo" Grid.Column="0" Content="La commande a bien été enregistrée." FontWeight="Bold" Foreground="white" />
                 <Label Opacity="0" x:Name="ProdNonDispoT" Grid.Column="0" Content="Les produits suivants n'ont plus de stock : " FontWeight="Bold" Foreground="Red" />
                 <Label Opacity="0" x:Name="ProdNonDispo" Grid.Column="1" Content="" FontWeight="Bold" Foreground="Red" />
             </Grid>
 
             <!--Demande Livraison-->
-            <TextBlock Opacity ="0" x:Name="TextLivraison" Margin =" 0 0 0 10" Text="Est-ce que le client veut se faire livrer ?" FontWeight="Bold" />
+            <TextBlock Opacity ="0" x:Name="TextLivraison" Margin =" 0 0 0 10" Text="Est-ce que le client veut se faire livrer ?" FontWeight="Bold" Foreground="White"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -102,10 +102,10 @@
             </Grid>
 
 
-            <Label Opacity="0" x:Name="ProdDispoS"  Content="La commande a bien été enregistrée sans le(s) produit(s) : " FontWeight="Bold" Foreground="Green" />
-            <Label Opacity="0" x:Name="AdresseClient"  Content="" FontWeight="Bold" Foreground="Green" />
-            <Label Opacity="0" x:Name="Fournisseurs"  Content="" FontWeight="Bold" Foreground="Green" />
-            <Button x:Name="Retour" Content="Retour" FontWeight ="Bold" Height="20" Margin="30,0,59.6,0" Click="OuiClient_Click_1"/>
+            <Label Opacity="0" x:Name="ProdDispoS"  Content="La commande a bien été enregistrée sans le(s) produit(s) : " FontWeight="Bold" Foreground="white" />
+            <Label Opacity="0" x:Name="AdresseClient"  Content="" FontWeight="Bold" Foreground="White" />
+            <Label Opacity="0" x:Name="Fournisseurs"  Content="" FontWeight="Bold" Foreground="White" />
+            <Button x:Name="Retour" Content="Menu" FontWeight ="Bold" Height="20" Margin="30,0,59.6,0" Click="OuiClient_Click_1" Width="50"/>
 
         </StackPanel>
 

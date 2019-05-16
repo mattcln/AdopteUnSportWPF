@@ -6,30 +6,30 @@
         xmlns:local="clr-namespace:AdopteUnSportWPF"
         mc:Ignorable="d"
         Title="Information Client" Height="650" Width="450">
-    <Border Padding="10">
-        <StackPanel>
-            <TextBlock x:Name="IdText" Margin =" 0 0 0 10" Text="Identifiant Client" FontWeight="Bold" />
+    <Border Padding="10" Background="#FF1F5962">
+        <StackPanel Background="#FF1F5962">
+            <TextBlock x:Name="IdText" Margin =" 0 0 0 10" Text="Identifiant Client" FontWeight="Bold" Foreground="White"/>
             <TextBox x:Name="IdClient" Grid.Column="0"/>
-            <TextBlock Margin =" 0 0 0 10" Text="Nom" FontWeight="Bold" />
+            <TextBlock Margin =" 0 0 0 10" Text="Nom" FontWeight="Bold" Foreground="White"/>
             <TextBox x:Name="NomC" Grid.Column="0"/>
-            <TextBlock Margin =" 0 0 0 10" Text="Adresse" FontWeight="Bold" />
+            <TextBlock Margin =" 0 0 0 10" Text="Adresse" FontWeight="Bold" Foreground="White"/>
             <TextBox x:Name="AdresseC" Grid.Column="0"/>
-            <TextBlock Margin =" 0 0 0 10" Text="Email" FontWeight="Bold" />
+            <TextBlock Margin =" 0 0 0 10" Text="Email" FontWeight="Bold" Foreground="White"/>
             <TextBox x:Name="MailC" Grid.Column="0"/>
 
-            <Button Content ="Rechercher" Grid.Column="1" Margin="10 10 10 0" Click="Button_Click"/>
+            <Button Content ="Rechercher" Grid.Column="1" Margin="10,10,10,0" Click="Button_Click" Width="75"/>
             <Label x:Name="Wrong" Grid.Column="2" Foreground="Red" Margin ="10 0 0 0" FontWeight ="Bold"/>
 
             <Label x:Name="Erreur" Opacity="0" Content="Aucun client n'a été trouvé avec ces informations." Height="25" Margin="0,0,0,0" Foreground="Red" FontWeight="Bold"/>
-            <Label x:Name="Nom" Height="25" Margin="0 10 0 0" Opacity = "1" ></Label>
-            <Label x:Name="Prenom" Height="25" Margin="0 10 0 0" Opacity = "1" ></Label>
-            <Label x:Name="Id" Height="25" Margin="0 10 0 0" Opacity = "1" ></Label>
-            <Label x:Name="Adresse" Height="25" Margin="0 10 0 0" Opacity = "1" ></Label>
-            <Label x:Name="Naissance" Height="25" Margin="0 10 0 0" Opacity = "1" ></Label>
-            <Label x:Name="Ville" Height="25" Margin="0 10 0 0" Opacity = "1" ></Label>
-            <Label x:Name="Depense" Height="25" Margin="0 10 0 0" Opacity = "1" ></Label>
-            <Label x:Name="Email" Height="25" Margin="0 10 0 0" Opacity = "1" ></Label>
-            <Button Content ="Retour" Grid.Column="1" Margin="340 45 30 0" Click="Button_Click_1"/>
+            <Label x:Name="Nom" Height="25" Margin="0 10 0 0" Opacity = "1" Foreground="White"></Label>
+            <Label x:Name="Prenom" Height="25" Margin="0 10 0 0" Opacity = "1" Foreground="White"></Label>
+            <Label x:Name="Id" Height="25" Margin="0 10 0 0" Opacity = "1" Foreground="White"></Label>
+            <Label x:Name="Adresse" Height="25" Margin="0 10 0 0" Opacity = "1" Foreground="White"></Label>
+            <Label x:Name="Naissance" Height="25" Margin="0 10 0 0" Opacity = "1" Foreground="White"></Label>
+            <Label x:Name="Ville" Height="25" Margin="0 10 0 0" Opacity = "1" Foreground="White"></Label>
+            <Label x:Name="Depense" Height="25" Margin="0 10 0 0" Opacity = "1" Foreground="White"></Label>
+            <Label x:Name="Email" Height="25" Margin="0 10 0 0" Opacity = "1" Foreground="White"></Label>
+            <Button Content ="Menu" Grid.Column="1" Margin="340 45 30 0" Click="Button_Click_1"/>
 
         </StackPanel>
     </Border>

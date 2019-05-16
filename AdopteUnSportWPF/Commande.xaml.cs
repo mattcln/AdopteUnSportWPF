@@ -224,7 +224,7 @@ namespace AdopteUnSportWPF
         }
         private void EnregisterLivraison(string IDProduit, string IDFournisseur)
         {
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenal1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
             string IDClient = TextBlockIDC.Text;
@@ -246,7 +246,7 @@ namespace AdopteUnSportWPF
         {
             string InformationClient = "";
 
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenal1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
 
@@ -269,7 +269,7 @@ namespace AdopteUnSportWPF
         }
         private int CréationNumLivraison()
         {
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenal1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
             MySqlCommand command = maConnexion.CreateCommand();
@@ -292,7 +292,7 @@ namespace AdopteUnSportWPF
         }
         private string RetrouverFournisseur(string IDProduit)
         {
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenal1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
 
@@ -313,7 +313,7 @@ namespace AdopteUnSportWPF
         private string RetrouverAdresse()
         {
             string IDClient = TextBlockIDC.Text;
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenal1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
 
@@ -341,7 +341,7 @@ namespace AdopteUnSportWPF
             ListeIDProduits = ListeIDProduits.Substring(0, ListeIDProduits.Length - 1);
             string[] TabIDProduits = ListeIDProduits.Split('-');
             string ProdIndispo = "";
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenal1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             int stock = 0;
             for (int i = 0; i < TabIDProduits.Length; i++)
@@ -390,7 +390,7 @@ namespace AdopteUnSportWPF
         }
         private void EnregistrerCommande(int NbArticles)
         {
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenal1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
             string IDClient = TextBlockIDC.Text;
@@ -407,7 +407,7 @@ namespace AdopteUnSportWPF
         }
         private string CréationIDCommande()
         {
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenal1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
             MySqlCommand command = maConnexion.CreateCommand();
@@ -433,7 +433,7 @@ namespace AdopteUnSportWPF
         private bool ExistenceClient(string IDClient)
         {
             bool Existence = false;
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenal1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
 
@@ -459,7 +459,7 @@ namespace AdopteUnSportWPF
         private bool ExistenceProduit(string IDProduit)
         {
             bool Existence = false;
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenal1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
 
@@ -485,7 +485,7 @@ namespace AdopteUnSportWPF
         }
         private void SoustraireArticle(string IDProduit)
         {
-            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Buzenal1998;";
+            string infoConnexion = "SERVER = localhost; PORT = 3306; DATABASE = magasinAdopteUnSport; UID = root; PASSWORD = Prekodragan3;";
             MySqlConnection maConnexion = new MySqlConnection(infoConnexion);
             maConnexion.Open();
 
